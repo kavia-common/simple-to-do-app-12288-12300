@@ -1,16 +1,27 @@
 # to_do_frontend
 
-A new Flutter project.
+Ocean Professional To-Do App (Flutter)
 
-## Getting Started
+Features:
+- Main task list with modern, minimalist design
+- Add task via floating action button and dialog
+- Edit tasks by tapping a card
+- Mark complete with checkbox
+- Swipe to delete (dismissible)
+- Smooth transitions, subtle shadows, rounded corners
+- Ocean Professional theme (blue #2563EB and amber #F59E0B accents)
+- Provider-based architecture and repository abstraction, ready for backend/db integration
 
-This project is a starting point for a Flutter application.
+Run:
+- flutter pub get
+- flutter run
 
-A few resources to get you started if this is your first Flutter project:
+Structure:
+- lib/main.dart: Entry point with theme, state (Provider), repository, and UI screens.
+- TaskRepository abstraction: swap InMemoryTaskRepository with a future backend (e.g., Supabase/REST/SQLite).
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Testing:
+- test/widget_test.dart contains basic UI tests for empty state and add flow.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Notes:
+- No configuration is required yet; future env variables for backend endpoints can be added to .env and loaded with flutter_dotenv when integration is implemented.
